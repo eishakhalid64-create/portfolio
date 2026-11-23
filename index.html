@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aftab | 3D Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #080d1c;
+    color: white;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background: #10182b;
+}
+
+.logo {
+    font-size: 28px;
+    color: #00e5ff;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+}
+
+nav a:hover {
+    color: #00e5ff;
+}
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px 8%;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.content h3 {
+    font-size: 25px;
+    color: #00e5ff;
+}
+
+.content h1 {
+    font-size: 60px;
+    margin: 15px 0;
+}
+
+.content p {
+    font-size: 18px;
+    color: #bdc9dc;
+    line-height: 1.8;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 13px 30px;
+    background: #00e5ff;
+    color: #080d1c;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    box-shadow: 0 0 25px #00e5ff;
+}
+
+.scene {
+    width: 280px;
+    height: 280px;
+    perspective: 900px;
+}
+
+.cube {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotate 9s infinite linear;
+    margin: 40px auto;
+}
+
+.face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    font-weight: bold;
+    background: rgba(0,229,255,0.12);
+    border: 2px solid #00e5ff;
+    box-shadow: inset 0 0 25px #00e5ff;
+    color: #00e5ff;
+}
+
+.front  { transform: translateZ(100px); }
+.back   { transform: rotateY(180deg) translateZ(100px); }
+.right  { transform: rotateY(90deg) translateZ(100px); }
+.left   { transform: rotateY(-90deg) translateZ(100px); }
+.top    { transform: rotateX(90deg) translateZ(100px); }
+.bottom { transform: rotateX(-90deg) translateZ(100px); }
+
+@keyframes rotate {
+    from { transform: rotateX(0) rotateY(0); }
+    to { transform: rotateX(360deg) rotateY(360deg); }
+}
+
+section {
+    padding: 65px 8%;
+    text-align: center;
+}
+
+section h2 {
+    color: #00e5ff;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: #121e35;
+    padding: 30px;
+    margin: 15px auto;
+    max-width: 600px;
+    border-radius: 15px;
+    border: 1px solid #00e5ff;
+    box-shadow: 0 10px 30px #000;
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 0 25px #00e5ff;
+}
+
+.card p {
+    color: #bdc9dc;
+    line-height: 2;
+}
+
+footer {
+    padding: 25px;
+    text-align: center;
+    background: #10182b;
+    color: #00e5ff;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">AFTAB.</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="hero" id="home">
+
+    <div class="content">
+        <h3>Hello, Welcome To My Portfolio</h3>
+        <h1>I'm Aftab</h1>
+        <h3>12th Class Student</h3>
+        <p>
+            I am a passionate student who loves learning
+            new things and developing new skills.
+            Welcome to my personal portfolio.
+        </p>
+        <a href="#about" class="btn">Explore My Portfolio</a>
+    </div>
+
+    <div class="scene">
+        <div class="cube">
+            <div class="face front">A</div>
+            <div class="face back">AFTAB</div>
+            <div class="face right">3D</div>
+            <div class="face left">2026</div>
+            <div class="face top">HELLO</div>
+            <div class="face bottom">WELCOME</div>
+        </div>
+    </div>
+
+</div>
+
+<section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+        <h3>My Introduction</h3>
+        <p>
+            My name is Aftab. I am a 12th class student.
+            I am hardworking, motivated and interested
+            in learning new skills.
+        </p>
+    </div>
+</section>
+
+<section id="education">
+    <h2>My Education</h2>
+    <div class="card">
+        <h3>Intermediate / Class 12th</h3>
+        <p>Name: Aftab</p>
+        <p>Class: 12th</p>
+        <p>Marks: 600</p>
+    </div>
+</section>
+
+<section id="skills">
+    <h2>My Skills</h2>
+    <div class="card">
+        <p>Communication Skills</p>
+        <p>Computer Basics</p>
+        <p>Time Management</p>
+        <p>Teamwork</p>
+        <p>Learning Skills</p>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <div class="card">
+        <h3>Let's Connect!</h3>
+        <p>Name: Aftab</p>
+        <p>Email: Your Email Here</p>
+        <p>Phone: Your Phone Number</p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Aftab | My 3D Portfolio
+</footer>
+
+</body>
+</html>
+
+</body>
+</html>
